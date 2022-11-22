@@ -212,13 +212,15 @@ opacity: 0.5;
   box-shadow: 3px 3px 8px grey;
 }
 
-.modal button{
+.close-button{
   margin: 1%;
   font-size: 2em;
   padding: 1%;
   color:#37383b;
   border: 3px rgb(222, 222, 222) solid;
   box-shadow: 2px 2px 5px grey;
+  margin-left: auto;
+  display: block;
 }
 
 .modal-box{
@@ -229,8 +231,33 @@ opacity: 0.5;
   margin: 2%;
 }
 
+.modal-row{
+  display: flex;
+  background-color: white;
+  align-items: center;
+}
+
+.modal-row-b{
+  display: flex;
+  background-color:rgb(247, 208, 251);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+
+.modal-row-b input{
+  margin: 1%;
+}
+
+
 .modal-cat-image{
   height: 30vh;
+  border: 20px rgb(247, 208, 251) solid;
+  box-sizing: content-box;
+  box-shadow: 2px 2px 2px grey;
+  margin: 1%;
+
 }
 
 /* 
