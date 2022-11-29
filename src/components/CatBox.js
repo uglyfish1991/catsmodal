@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Modal from 'react-modal'
+import CatModal from './CatModal'
 
 Modal.setAppElement('#root')
 
@@ -8,56 +9,14 @@ Modal.setAppElement('#root')
 // I tried to refactor and couldn't - research on Wed in free dev time.
 
 const CatBox = ({ cat, index, }) => {
-
-  const [modalIsOpen, setIsOpen] = useState(false)
-  let subtitle;
-
-  const openModal = () => {
-    setIsOpen(true);
-    console.log(modalIsOpen)
-  }
-
-  function afterOpenModal() {
-    // references are now sync'd and can be accessed. I don't know what this means it was in the docs? Read this more. Made it bright so I could see it - still can't see it
-    subtitle.style.color = '#00ff00';
-  }
-
-  const closeModal = () => {
-    setIsOpen(false);
-    console.log(modalIsOpen)
-  }
-
-  return (
+  return(
     <div className="cat-card" key={index}>
       <img src={cat.url} alt="A Cat" />
-      <div class="cat-content">
+      <div className="cat-content">
         <p>{cat.breeds[0].name}</p>
-        <button onClick={openModal}>Learn more?</button>
-      </div>
-      <Modal isOpen={modalIsOpen} onAfterOpen={afterOpenModal} onRequestClose={closeModal} contentLabel="Example Modal" className="modal">
-        <button onClick={closeModal} className="close-button">X</button>
-        <div className="modal-box">
-          <div className="modal-row">
-            <img src={cat.url} alt="A Cat" className="modal-cat-image" />
-            <div>
-              <h3>All About The {cat.breeds[0].name}</h3>
-              <p>{cat.breeds[0].temperament}</p>
-              <p>{cat.breeds[0].description}</p>
-            </div>
-            </div>
-            <div className="modal-row-b">
-              Adopt a {cat.breeds[0].name}
-              <input type="number" min="0" max="5"></input>
-              <button type="submit">Adopt</button>
-            </div>
-
-
-
-
-
-        </div>
-      </Modal>
+        <CatModal cat={cat} index={index} />
     </div>
+  </div>
   )
 
 }

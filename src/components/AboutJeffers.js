@@ -1,6 +1,17 @@
+import React, { useContext } from "react";
+import { Context } from "../contexts/Counter";
+
 const AboutJeffers = () => {
+
+    const [context,setContext] = useContext(Context)
+    console.log(context)
     return (
-        <h1>This page will be all about jeffers</h1>
+        <div>
+            <h1>Have I proved my concept?</h1>
+            <p> {context}</p>
+            </div>
+            
+
     )
 }
 
