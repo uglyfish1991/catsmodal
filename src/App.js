@@ -3,17 +3,16 @@ import './App.css'
 import Header from "./components/Header"
 import Routes from "./components/Routes"
 import Footer from "./components/Footer";
-import { Context } from "./contexts/Counter";
+import { CounterProvider } from "./contexts/CatContext"; // brackes c0s n0t default export
 
 const App = () => {
-  const [context, setContext]=useState("I have not proved my concept")
 
   return (
-    <Context.Provider value={[context,setContext]} >
+    <CounterProvider>
       <Header />
       <Routes />
       <Footer />
-      </Context.Provider >
+    </CounterProvider>
   );
 }
 
