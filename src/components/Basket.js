@@ -1,15 +1,20 @@
 import React, { useState, createContext,useContext } from "react";
-// import { Context } from "../contexts/CatContext";
+import { Context as BasketContext } from "../contexts/BasketContext";
 
 const Basket = () => {
 
-    // const [context, setContext] = useContext(Context);
-    return (
+  const {buyCat} = useContext(BasketContext)
+  console.log(buyCat)
+  return (
       <div>
-        <h1>Your Basket of Cats</h1>
-        {/* <button onClick={()=> setContext("I have proved my concept")}>Change Context to Yes</button> */}
-      </div>
-    );
-  }
+          <h1>Your Adoption Request</h1>
+          <hr/>
+          <p> {buyCat} </p>
+          </div>
+          
+// c0ndit0nal rrender c0s favcat will initially be null - tern 0p i fast 
+// this ? true : false
+  )
+}
 
 export default Basket;
