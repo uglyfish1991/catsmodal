@@ -3,8 +3,17 @@ import Modal from 'react-modal';
 import { Context as CatContext} from "../contexts/CatContext";
 import { Context as BasketContext} from "../contexts/BasketContext";
 const CatModal = ({ cat, index }) => {
-    const {setFavCat} = useContext(CatContext)
+    const {favCat,setFavCat} = useContext(CatContext)
     const {setBuyCat} = useContext(BasketContext)
+
+    console.log("This is setFavCat object:" + favCat)
+
+    const handleNewFav = (newFavItem)=>{
+        let newFavArray=[...favCat]
+        newFavArray.push(newFavItem)
+        setFavCat(newFavArray)
+        console.log("This is catContext:" + CatContext)
+    }
 
     const [modalIsOpen, setIsOpen] = useState(false)
     let subtitle;
@@ -42,7 +51,7 @@ const CatModal = ({ cat, index }) => {
                         Adopt a {cat.breeds[0].name}
                         <input type="number" min="0" max="5"/>
                         <button onClick={()=> setBuyCat(cat.breeds[0].name)}>Adopt</button>
-                        <button onClick={()=> setFavCat(cat.breeds[0].name)}>Fav this cat</button>
+                        <button onClick={()=> handleNewFav(cat.breeds[0].name)}>Fav this cat</button>
                     </div>
                 </div>
             </Modal>

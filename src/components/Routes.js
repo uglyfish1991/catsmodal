@@ -3,6 +3,7 @@ import Cats from "./Cats"
 import Basket from "./Basket"
 import CatWeek from "./CatWeek"
 import AboutJeffers from "./AboutJeffers"
+import FavCatList from "./FavCatList"
 
 
 const Routes = ()=>{
@@ -11,6 +12,7 @@ const Routes = ()=>{
             <Route path="/" element={<CatWeek /> } />
             <Route path="/cats" element={<Cats />} />
             <Route path="/basket" element={<Basket />} />
+            <Route path="/favourites" element={<FavCatList />} />
             <Route path="/aboutjeffers" element={<AboutJeffers />}/>
         </RouteList>
 )}
