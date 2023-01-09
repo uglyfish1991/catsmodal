@@ -4,7 +4,7 @@ export const Context = React.createContext(null);
 
 export function CounterProvider({children}) {
 
-    const [favCat, setFavCat] = useState([""])
+    const [favCat, setFavCat] = useState([])
 
     return (
         <Context.Provider value={{favCat, setFavCat}}>

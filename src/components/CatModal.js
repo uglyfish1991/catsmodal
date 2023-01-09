@@ -51,7 +51,7 @@ const CatModal = ({ cat, index }) => {
                         Adopt a {cat.breeds[0].name}
                         <input type="number" min="0" max="5"/>
                         <button onClick={()=> setBuyCat(cat.breeds[0].name)}>Adopt</button>
-                        <button onClick={()=> handleNewFav(cat.breeds[0].name)}>Fav this cat</button>
+                        <button onClick={()=> handleNewFav(cat)}>Fav this cat</button>
                     </div>
                 </div>
             </Modal>
