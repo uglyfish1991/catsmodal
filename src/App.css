@@ -23,6 +23,10 @@ h1,h3{
   font-size: 3em;
 }
 
+button:hover{
+  cursor: pointer;
+}
+
 
 /* 
 // ========================================================================================================
@@ -250,15 +254,28 @@ opacity: 0.5;
   margin: 1%;
 }
 
-
 .modal-cat-image{
   height: 30vh;
   border: 20px rgb(247, 208, 251) solid;
   box-sizing: content-box;
   box-shadow: 2px 2px 2px grey;
   margin: 1%;
-
 }
+
+.modal-row-b button{
+  padding: 1%;
+  margin-right: 1%;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 20px;
+  background-color: rgb(95, 56, 91);
+}
+
+.modal-row-b button:last-of-type{
+  background-color: rgb(0, 74, 0);
+}
+
+
 
 /* 
 // ========================================================================================================

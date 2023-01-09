@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-//g00d practise to use null n0t blank - 0therwise will be undefined. ull is 0bivi0us/intenti0nal undefined c0uld be accident
 export const Context = React.createContext(null);
 
 export function CounterProvider({children}) {
